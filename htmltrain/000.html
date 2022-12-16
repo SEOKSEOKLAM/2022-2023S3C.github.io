@@ -10,11 +10,7 @@
     <title>歡迎來到2022-2023年度的高三C班
     </title>
     <link rel="stylesheet" href="123.css">
-    <link rel="stylesheet" href="333.css">
 </head>
-<div id="tip">
-    <i class="icon"></i>
-    <p>為了更好的體驗，請使用橫屏瀏覽</p>
 </div>
     <div class="container">  
         <div class="form-box ">
@@ -72,20 +68,16 @@
             login_box.classList.remove('hidden');
         })
     </script>
-    <script>
-     ;(function screenStatus() {
-        const element = document.querySelector('#tip');
-        element.style.visibility = 'hidden';
-        const status = "onorientationchange" in window ? "orientationchange" : "resize";
-        window.addEventListener(status, e => {
-            if (window.orientation === 180 || window.orientation === 0) {
-                element.style.visibility = 'hidden';
-            }
-            if (window.orientation === 90 || window.orientation === -90) {
-                element.style.visibility = 'visible';
-            }
-        });
-        }());
-        </script>
+    <style>
+        /*竖屏*/
+        @media only screen and (orientation:portrait ) {
+        }
+        /*横屏*/
+        @media only screen and (orientation:landscape) {
+        body *{ display:none;}
+        body{ background-color:lightblue;}
+        body:after{ content:"為了更好的體驗，請使用豎屏遊覽！！！"}
+        }
+        </style>
 </body>
 </html>
